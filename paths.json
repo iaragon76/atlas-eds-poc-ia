@@ -1,0 +1,8 @@
+{
+  "mappings": [
+    "/content/atlas-eds-poc-ia/:/"
+  ],
+  "includes": [
+    "/content/atlas-eds-poc-ia/"
+  ]
+}
