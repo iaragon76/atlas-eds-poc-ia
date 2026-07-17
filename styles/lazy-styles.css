@@ -1,1 +1,138 @@
 /* add global styles that can be loaded post LCP here */
+
+/* Section dividers */
+main > .section {
+  border-top: 1px solid var(--color-border);
+}
+
+main > .section:first-of-type {
+  border-top: none;
+}
+
+main > .section.highlight {
+  border-top: none;
+}
+
+/* "You might be interested in" card section */
+.section.highlight h2,
+.section.highlight .cmp-title {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.section.highlight .columns > div > div {
+  background: var(--background-color);
+  border-radius: 12px;
+  padding: 0;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0 0 0 / 6%);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.section.highlight .columns > div > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0 0 0 / 10%);
+}
+
+.section.highlight .columns > div > div picture img {
+  border-radius: 0;
+  aspect-ratio: 16 / 9;
+  box-shadow: none;
+}
+
+.section.highlight .columns > div > div picture img:hover {
+  transform: none;
+  box-shadow: none;
+}
+
+.section.highlight .columns > div > div h3,
+.section.highlight .columns > div > div p,
+.section.highlight .columns > div > div .button-wrapper {
+  padding: 0 var(--spacing-lg);
+}
+
+.section.highlight .columns > div > div h3 {
+  margin-top: var(--spacing-lg);
+  font-size: var(--heading-font-size-m);
+}
+
+.section.highlight .columns > div > div p:last-of-type {
+  padding-bottom: var(--spacing-lg);
+}
+
+/* Breadcrumb refinement */
+.breadcrumb {
+  border-bottom: 1px solid var(--color-border);
+  margin-bottom: var(--spacing-md);
+}
+
+/* Overview of documents: teal container with white card */
+.overview-section {
+  background-color: #054E5A !important;
+  padding: 48px 0 64px !important;
+  border-top: none !important;
+}
+
+.overview-section > div {
+  max-width: 1200px;
+  margin: auto;
+  padding: 0 24px;
+}
+
+.overview-section h2 {
+  color: #ffffff !important;
+  margin-bottom: 32px;
+  font-family: 'Noto Serif', Arial, Helvetica, sans-serif;
+}
+
+.overview-section .tabs-wrapper {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 0;
+  overflow: hidden;
+}
+
+.overview-section .tabs-wrapper .tabs {
+  padding: 0;
+}
+
+/* Sticky Feedback button (right side, gold) */
+.feedback-btn {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  background-color: #e1b77e;
+  color: #054e5a;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 10px 16px;
+  border: none;
+  cursor: pointer;
+  z-index: 200;
+  box-shadow: -2px 0 8px rgba(0 0 0 / 15%);
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  transform: rotate(180deg);
+}
+
+/* Page title styling - handled by cmp-teaser classes in ds-brand.css */
+main h1 + p {
+  color: #3e3f41;
+  font-size: 18px;
+  font-family: var(--body-font-family);
+  max-width: 700px;
+  line-height: 1.75;
+  font-weight: 400;
+}
+
+/* Section label - now handled by cmp-teaser__pretitle */
+
+/* Hero section with teal-tinted background */
+main > .section:first-of-type {
+  background-color: var(--color-brand-teal-light, #e8edef);
+  padding: var(--spacing-lg) 0 var(--spacing-xl);
+  margin: 0;
+  border-bottom: 1px solid var(--color-border);
+}

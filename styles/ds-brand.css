@@ -1,0 +1,262 @@
+/**
+ * Atlas Copco GROUP Design System - Brand Layer
+ * Source: DS repo (atlas-copco-group-ts) + production overrides (.ds-atlascopcogroup)
+ *
+ * Base tokens from: _settings.colors.scss, _settings.fonts.scss
+ * Production overrides extracted from: atlascopcogroup.com compiled CSS
+ * The production build adds .ds-atlascopcogroup overrides on top of the DS base
+ */
+
+/* === DS TOKENS (from _settings.colors.scss) === */
+:root {
+  --ds-brand-primary: #054E5A;
+  --ds-brand-darkblue: #0D616F;
+  --ds-brand-gold: #E1B77E;
+  --ds-brand-darkgrey: #414042;
+  --ds-brand-black: #0d0d0d;
+  --ds-brand-lightblue: #CED9D7;
+  --ds-brand-petrol: #008c95;
+  --ds-brand-blue: #005470;
+  --ds-gray1: #F7F8F9;
+  --ds-gray2: #E6EDEF;
+  --ds-gray3: #E6E7E8;
+  --ds-gray4: #BCBEC0;
+  --ds-gray5: #808285;
+  --ds-gray8: #dae6ea;
+  --ds-text: #0d0d0d;
+  --ds-headlines: #054E5A;
+}
+
+/* === DS TYPOGRAPHY === */
+/* Base from _settings.fonts.scss, overridden by .ds-atlascopcogroup production */
+body {
+  font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  line-height: 26px;
+  color: var(--ds-text);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+  font-weight: 400;
+  color: var(--ds-headlines);
+  border-bottom: 0;
+}
+
+/* Production override: H1-H3 use Noto Serif */
+h1 {
+  font-family: 'Noto Serif', Arial, Helvetica, sans-serif;
+  font-size: 36px;
+  line-height: 1.33;
+  margin-bottom: 24px;
+}
+
+h2 {
+  font-family: 'Noto Serif', Arial, Helvetica, sans-serif;
+  font-size: 28px;
+  line-height: 1.4;
+  margin-bottom: 16px;
+}
+
+h3 {
+  font-family: 'Noto Serif', Arial, Helvetica, sans-serif;
+  font-size: 24px;
+  line-height: 1.33;
+  margin-bottom: 12px;
+}
+
+h4 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 8px;
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1.4;
+  margin-bottom: 4px;
+}
+
+h6 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 1.33;
+  margin-bottom: 4px;
+}
+
+@media (width >= 900px) {
+  h1 {
+    font-size: 56px;
+    letter-spacing: -1px;
+    line-height: 1.14;
+  }
+
+  h2 {
+    font-size: 40px;
+  }
+
+  h3 {
+    font-size: 32px;
+    line-height: 1.375;
+  }
+
+  h4 {
+    font-size: 24px;
+    line-height: 1.33;
+  }
+}
+
+/* === DS LINKS === */
+a {
+  text-decoration: none;
+  color: #1072b9;
+  transition: color 0.3s ease-in-out;
+}
+
+a:hover {
+  color: #123f6d;
+}
+
+/* === cmp-teaser: from ac-group-lib/lib/teaser === */
+.cmp-teaser {
+  font-family: 'Noto Sans', Arial, Helvetica, sans-serif;
+}
+
+.cmp-teaser__pretitle {
+  font-weight: 700;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: #054E5A;
+  margin: 0 0 8px;
+}
+
+.cmp-teaser__title {
+  font-family: 'Noto Serif', Arial, Helvetica, sans-serif !important;
+  color: #054E5A;
+  margin: 0.5em 0;
+}
+
+.cmp-teaser__description {
+  font-size: 18px;
+  line-height: 1.75;
+  color: #3e3f41;
+  margin: 0;
+}
+
+/* === cmp-title: from ac-group-lib/lib/title === */
+.cmp-title__text {
+  font-family: 'Noto Serif', Arial, Helvetica, sans-serif;
+  color: #054E5A;
+}
+
+/* === ds-brand-teaser-card: from ac-group-lib/lib/teaser-card === */
+.ds-brand-teaser-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (width >= 900px) {
+  .ds-brand-teaser-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.ds-brand-teaser-card.ds-brand-filled-light .cmp-teaser {
+  gap: 0;
+  border-radius: 24px 24px 24px 0;
+  overflow: hidden;
+  background: #ffffff;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  transition: box-shadow 0.3s;
+}
+
+.ds-brand-teaser-card.ds-brand-filled-light .cmp-teaser:hover {
+  box-shadow: 0 20px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+.ds-brand-teaser-card .cmp-teaser__content {
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.ds-brand-teaser-card .cmp-teaser__title {
+  font-family: 'Noto Serif', Arial, Helvetica, sans-serif;
+  color: #054E5A;
+  font-size: 24px;
+  font-weight: 400;
+  line-height: 1.33;
+  margin: 0 0 12px;
+}
+
+@media (width >= 900px) {
+  .ds-brand-teaser-card .cmp-teaser__title {
+    font-size: 32px;
+    line-height: 1.375;
+  }
+}
+
+.ds-brand-teaser-card .cmp-teaser__description {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #3e3f41;
+  margin: 0;
+}
+
+.ds-brand-teaser-card .cmp-teaser__action-container {
+  margin-top: 24px;
+}
+
+.ds-brand-teaser-card .cmp-teaser__action-link {
+  color: #054E5A;
+  font-weight: 600;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transition: color 0.3s;
+}
+
+.ds-brand-teaser-card .cmp-teaser__action-link::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: currentColor;
+  mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 12h14M12 5l7 7-7 7' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  -webkit-mask-image: url("data:image/svg+xml,%3Csvg width='24' height='24' viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5 12h14M12 5l7 7-7 7' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+  mask-repeat: no-repeat;
+  mask-position: center;
+  transition: transform 0.3s;
+  flex-shrink: 0;
+}
+
+.ds-brand-teaser-card .cmp-teaser__action-link:hover::before {
+  transform: translateX(4px);
+}
+
+.ds-brand-teaser-card .cmp-teaser__image {
+  margin: 0;
+  padding: 0;
+  display: block;
+  line-height: 0;
+  font-size: 0;
+}
+
+.ds-brand-teaser-card .cmp-image__image {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+  aspect-ratio: 16 / 9;
+  border-radius: 0;
+  margin: 0;
+  padding: 0;
+}

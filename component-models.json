@@ -214,5 +214,33 @@
         "valueType": "string"
       }
     ]
+  },
+  {
+    "id": "tab-item",
+    "fields": [
+      {
+        "label": "Tab Label",
+        "name": "label",
+        "component": "text",
+        "valueType": "string"
+      },
+      {
+        "label": "Tab Content",
+        "name": "content",
+        "component": "richtext",
+        "valueType": "string"
+      }
+    ]
+  },
+  {
+    "id": "breadcrumb",
+    "fields": [
+      {
+        "label": "Breadcrumb Links",
+        "name": "links",
+        "component": "richtext",
+        "valueType": "string"
+      }
+    ]
   }
 ]
