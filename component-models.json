@@ -222,13 +222,15 @@
         "label": "Tab Label",
         "name": "label",
         "component": "text",
-        "valueType": "string"
+        "valueType": "string",
+        "value": ""
       },
       {
         "label": "Tab Content",
         "name": "content",
         "component": "richtext",
-        "valueType": "string"
+        "valueType": "string",
+        "value": ""
       }
     ]
   },
